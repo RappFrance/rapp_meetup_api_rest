@@ -1,20 +1,25 @@
+<section data-markdown>
+<script type="text/template">
 # premiere page
 Titre + photo du banc
-
-# Introduction
+</script>
+<script type="text/template">
+#Introduction
 Tendance au découplage front/back : angular, appli mobiles, ...
 => mise en place d'une interface de communication entre ces éléméents : une API.
-
+</script>
+<script type="text/template">
 # C'est quoi une API ?
 1) Définition
 2) Une api peut-être accessible au niveau programmation (language, bibliothèques, plugin ...), matériel (embarqué, drivers, imprimantes), et au niveau réseau, web compris.
-
+</script>
+<script type="text/template">
 # Des types API web
 SOAP
 RPC
 Json-RPC
 Rest
-
+</script>
 # API REST : un ensemble de Ressources et d’URI
 
 1) Pour comprendre le paradigme subjacent à une API Rest, il faut envisager le web comme un ensemble de **ressources**.
@@ -75,3 +80,4 @@ A la mano, mais il existe des frameworks : exemple : sails.js
 5) demo
 
 # Merci des question ?
+</section>
