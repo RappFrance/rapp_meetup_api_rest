@@ -1,0 +1,77 @@
+# premiere page
+Titre + photo du banc
+
+# Introduction
+Tendance au découplage front/back : angular, appli mobiles, ...
+=> mise en place d'une interface de communication entre ces éléméents : une API.
+
+# C'est quoi une API ?
+1) Définition
+2) Une api peut-être accessible au niveau programmation (language, bibliothèques, plugin ...), matériel (embarqué, drivers, imprimantes), et au niveau réseau, web compris.
+
+# Des types API web
+SOAP
+RPC
+Json-RPC
+Rest
+
+# API REST : un ensemble de Ressources et d’URI
+
+1) Pour comprendre le paradigme subjacent à une API Rest, il faut envisager le web comme un ensemble de **ressources**.
+(explication orale)
+Chaque ressource dispose de plusieurs **représentations**
+Mais quelque soit sa représentation, une ressource est identifiée par une **URI unique**
+
+2) REST (pour REpresentational State Transfer) est un style d’architecture proposant l’exposition de ressources. REST n’est pas un standard comme le HTML 5. Comme le principe MVC, il s’agit d’un style d’architecture. Les API REST peuvent être réalisés en .NET, Php, Javascript ou Python… Mais quel que soit le language utilisé, le but est d’exposer des ressources.
+
+3) Le premier principe d’architecture REST consiste donc à identifier les ressources avec des URI.
+L’identification des ressources est la pierre angulaire d’une architecture REST. La définition des URI ne peut donc être la conséquence d’un développement. Les URI doivent être spécifiées au moment de la conception.
+
+# Le language Rest : les verbes Http
+
+1) Une fois que l’on sait comment accèder à une ressource (on connait son URI), on va utiliser le protocole HTTP pour interagir avec cette ressource.
+Le deuxième composant de l’architecture REST est le protocole HTTP.
+
+2)Exemple d’une requète vers http://www.rappfrance.com
+
+GET / HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate, compress
+Host: www.rappfrance.com
+User-Agent: HTTPie/0.8.0
+
+3) les verbes http
+- GET
+- POST
+- PUT
+- DELETE
+
+4) La réponse http
+les 200, 300, 400, 500
+
+5) une interface uniforme
+
+
+# une example d'API: le wsw rapp
+
+1) la problématique : des gens et des services
+
+2) un plan d'adressage
+Même si, en soit, REST ne force pas un style d’URIs particulier (rien n’empêche d’utiliser des noms d’URLs abscons pour exposer les ressources), l’usage et la pratique montrent qu’un plan d’adressage clair, lisible et consistant favorisent l’adoption d’une API, sa facilité de compréhension et d’utilisation.
+Suivant le fameux principe « Cools URIs don’t change », il faut choisir évidemment des URLs agnostiques du point de vue de la technologie (ie., pas de « .php » dans l’url) ou de tout autre élément susceptible de changer dans le temps.
+C’est une bonne pratique pour le code, et c’est également une bonne pratique pour les APIs : exposer des urls, des noms de champs ou des paramètres en anglais. Cela facilitera l’adoption large de l’API, en ne faisant pas de la langue une barrière forte.
+
+3) l'example
+wsw.rappfrance.com/api/dps en GET => obtenir la liste des départements
+wsw.rappfrance.com/api/dps en POST => créer un nouveau département
+wsw.rappfrance.com/api/dps/id en GET => obtenir le détail d’un salarié
+wsw.rappfrance.com/api/dps/id en PUT/PATCH => mettre à jour le détail d’un salarié
+wsw.rappfrance.com/api/dps/id en DELETE => supprimer une personne
+wsw.rappfrance.com/api/employee en GET => obtenir la lsite coplète des salariés
+
+4) l'implémentation
+A la mano, mais il existe des frameworks : exemple : sails.js
+
+5) demo
+
+# Merci des question ?
