@@ -45,15 +45,21 @@
 
 				<section>
 					<h2>Les API Rest</h2>
-					<h3>@ Rapp Meetup</h3>
-					<p style="font-size: 0.7em"><a href="https://github.com/yvan-castanie">Yvan Castanie</a> / <a href="https://twitter.com/yvan_castanie">@yvan-castanie</a> - 
-					<a href="https://github.com/alexisjanvier">Alexis Janvier</a> / <a href="http://twitter.com/alexisjanvier">@alexisjanvier</a></p>
+					<h4>@ Rapp Meetup</h4>
+					<p style="font-size: 0.7em"><a href="https://github.com/yvan-castanie">Yvan Castanie</a> (<a href="https://twitter.com/yvan_castanie">@yvan-castanie</a>) /  
+					<a href="https://github.com/alexisjanvier">Alexis Janvier</a> (<a href="http://twitter.com/alexisjanvier">@alexisjanvier</a>)</p>
 					<img width="280" height="326" src="images/intro.jpg" alt="Rest here">
 				</section>
 
 				<section>
-					<h2>Intro</h2>
-					<p>Tendance au découplage front/back : angular, appli mobiles, ... => mise en place d'une interface de communication entre ces éléméents : une API.</p>
+					<h2>Introduction</h2>
+					<p>On constate une tendance au découplage front/back : </p>
+						<ul>
+							<li class="fragment">angular</li>
+							<li class="fragment">appli mobiles</li>
+							<li class="fragment">...</li>
+						</ul>
+					 <p class="fragment">On va donc mettre en place une interface de communication entre ces éléments : une <strong>API</strong>.</p>
 				</section>
 
 				<section>
@@ -93,14 +99,14 @@
 						<p>Une fois que l’on sait comment accèder à une ressource (on connait son URI), on va utiliser le protocole HTTP pour interagir avec cette ressource. Le deuxième composant de l’architecture REST est le protocole HTTP.</p>
 					</section>
 					<section>
-						<p>Exemple d’une requète vers http://www.rappfrance.com
-
-							GET / HTTP/1.1
-							Accept: */*
-							Accept-Encoding: gzip, deflate, compress
-							Host: www.rappfrance.com
-							User-Agent: HTTPie/0.8.0
-							</p>
+						<p>Exemple d’une requète vers http://www.rappfrance.com :</p>
+<pre><code data-trim contenteditable>
+GET / HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate, compress
+Host: www.rappfrance.com
+User-Agent: HTTPie/0.8.0
+</code></pre>
 					</section>
 					<section>
 						<p>les verbes http
