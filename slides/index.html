@@ -54,8 +54,8 @@
 					<h2>Aujourd'hui, </h2>
 					<p>on constate une tendance au découplage front/back : </p>
 					<ul>
-						<li class="fragment"><img src="images/angular.png" width="200"/></li>
-						<li class="fragment"><img src="images/mobile.jpg" width="200"/></li>
+						<li class="fragment"><img src="images/angular.png" width="100"/></li>
+						<li class="fragment"><img src="images/mobile.jpg" width="100"/></li>
 						<li class="fragment">...</li>
 					</ul>
 					 <p class="fragment">On va donc mettre en place une interface de communication entre ces éléments : une <strong>API</strong>.</p>
@@ -114,18 +114,22 @@ User-Agent: HTTPie/0.8.0
 </code></pre>
 					</section>
 					<section>
-						<p>les verbes http : </p>
+						<p>les verbes (méthodes) http : </p>
 						<p>- GET</p>
 						<p>- POST</p>
 						<p>- PUT</p>
+						<p>- PATCH</p>
 						<p>- DELETE</p>
+						<p class="fragment">- HEAD</p>
+						<p class="fragment">- PATCH</p>
+						<p class="fragment">- TRACE</p>
 					</section>
 					<section>
-						<p>La réponse http : 
-						<p>200</p>
-                        <p>300</p>
-                        <p>400</p>
-                        <p>500</p>
+						<p>La réponse (HTTP Status Codes) http : 
+						<p>- 2xx Success (200: OK, 201: created, 204: No Content)</p>
+				                       <p>- 3xx Redirection</p>
+				                       <p>- 4xx Client Error (400: Bad Request, 401: Unauthorized, 403: Forbidden, 409: Conflict)</p>
+				                       <p>- 5xx Server Error</p>
 					</section>
 					<section>
 						<p>Une interface uniforme</p>
