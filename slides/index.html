@@ -51,11 +51,11 @@
 				</section>
 
 				<section>
-					<h2>Introduction</h2>
-					<p>On constate une tendance au découplage front/back : </p>
+					<h2>Aujourd'hui, </h2>
+					<p>on constate une tendance au découplage front/back : </p>
 					<ul>
-						<li class="fragment">angular TEST</li>
-						<li class="fragment">appli mobiles</li>
+						<li class="fragment"><img src="images/angular.png" width="200"/></li>
+						<li class="fragment"><img src="images/mobile.jpg" width="200"/></li>
 						<li class="fragment">...</li>
 					</ul>
 					 <p class="fragment">On va donc mettre en place une interface de communication entre ces éléments : une <strong>API</strong>.</p>
@@ -64,38 +64,44 @@
 				<section>
 					<section>
 						<h2>C'est quoi une API ?</h2>
-						<p>Définition</p>
+						<ul>
+                            <li>un ensemble normalisé de classes, méthodes, procédures et fonctions</li>
+                            <li>programme founisseur et programme consommateur</li>
+                            <li>un objectif ===> interopérabilité </li>
+                        </ul>
 					</section>
 					<section>
-						<p>Une api peut-être accessible au niveau programmation (language, bibliothèques, plugin ...), matériel (embarqué, drivers, imprimantes), et au niveau réseau, web compris.</p>
+						<p>Une api peut-être accessible au niveau programmation ( language, bibliothèques, plugin ... ), matériel (embarqué, drivers, imprimantes... )et au niveau réseau, web compris.</p>
 					</section>
 				</section>
 
 				<section>
-					<h2>Des types API web</h2>
-					<p>SOAP RPC Json-RPC Rest</p>
+					<h2>Des types API web :</h2>
+					<p>SOAP </p>
+                    <p>RPC </p>
+                    <p>Json-RPC</p>
+                    <p>Rest</p>
+                    <p>...</p>
 				</section>
 
 				<section>
 					<section>
 						<h2>API REST : un ensemble de Ressources et d’URI</h2>
-						<p>Pour comprendre le paradigme subjacent à une API Rest, il faut envisager le web comme un ensemble de **ressources**.
-							(explication orale)
-							Chaque ressource dispose de plusieurs **représentations**
-							Mais quelque soit sa représentation, une ressource est identifiée par une **URI unique**</p>
+						<p>Pour comprendre le paradigme subjacent à une API Rest, il faut envisager le web comme un ensemble de ressources. </p>
+						<p>Chaque ressource dispose de plusieurs représentations< br />Mais quelque soit sa représentation, une ressource est identifiée par une URI unique</p>
 					</section>
 					<section>
-						<p>REST (pour REpresentational State Transfer) est un style d’architecture proposant l’exposition de ressources. REST n’est pas un standard comme le HTML 5. Comme le principe MVC, il s’agit d’un style d’architecture. Les API REST peuvent être réalisés en .NET, Php, Javascript ou Python… Mais quel que soit le language utilisé, le but est d’exposer des ressources.</p>
+						<p>REST (pour REpresentational State Transfer) est un style d’architecture proposant l’exposition de ressources. <br />REST n’est pas un standard comme le HTML 5. Comme le principe MVC, il s’agit d’un style d’architecture. Les API REST peuvent être réalisés en .NET, Php, Javascript ou Python… Mais quel que soit le language utilisé, le but est d’exposer des ressources.</p>
 					</section>
 					<section>
-						<p>Le premier principe d’architecture REST consiste donc à identifier les ressources avec des URI. L’identification des ressources est la pierre angulaire d’une architecture REST. La définition des URI ne peut donc être la conséquence d’un développement. Les URI doivent être spécifiées au moment de la conception.</p>
+						<p>Le premier principe d’architecture REST consiste donc à identifier les ressources avec des URI. L’identification des ressources est la pierre angulaire d’une architecture REST.<br /> La définition des URI ne peut donc être la conséquence d’un développement. Les URI doivent être spécifiées au moment de la conception.</p>
 					</section>
 				</section>
 
 				<section>
 					<section>
 						<h2>Le language Rest : les verbes Http</h2>
-						<p>Une fois que l’on sait comment accèder à une ressource (on connait son URI), on va utiliser le protocole HTTP pour interagir avec cette ressource. Le deuxième composant de l’architecture REST est le protocole HTTP.</p>
+						<p>Une fois que l’on sait comment accèder à une ressource (on connait son URI), on va utiliser le protocole HTTP pour interagir avec cette ressource. <br />Le deuxième composant de l’architecture REST est le protocole HTTP.</p>
 					</section>
 					<section>
 						<p>Exemple d’une requète vers http://www.rappfrance.com :</p>
@@ -108,48 +114,54 @@ User-Agent: HTTPie/0.8.0
 </code></pre>
 					</section>
 					<section>
-						<p>les verbes http
-						- GET
-						- POST
-						- PUT
-						- DELETE</p>
+						<p>les verbes http : </p>
+						<p>- GET</p>
+						<p>- POST</p>
+						<p>- PUT</p>
+						<p>- DELETE</p>
 					</section>
 					<section>
-						<p>La réponse http
-						les 200, 300, 400, 500</p>
+						<p>La réponse http : 
+						<p>200</p>
+                        <p>300</p>
+                        <p>400</p>
+                        <p>500</p>
 					</section>
 					<section>
-						<p>une interface uniforme</p>
+						<p>Une interface uniforme</p>
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2>une example d'API: le wsw rapp</h2>
-						<p>la problématique : des gens et des services</p>
+						<h2>Un example d'API: le wsw rapp</h2>
+						<p>La problématique : des gens et des services</p>
 					</section>
 					<section>
 						<p>un plan d'adressage
-						Même si, en soit, REST ne force pas un style d’URIs particulier (rien n’empêche d’utiliser des noms d’URLs abscons pour exposer les ressources), l’usage et la pratique montrent qu’un plan d’adressage clair, lisible et consistant favorisent l’adoption d’une API, sa facilité de compréhension et d’utilisation.
-						Suivant le fameux principe « Cools URIs don’t change », il faut choisir évidemment des URLs agnostiques du point de vue de la technologie (ie., pas de « .php » dans l’url) ou de tout autre élément susceptible de changer dans le temps.
+						Même si, en soit, REST ne force pas un style d’URIs particulier, l’usage et la pratique montrent qu’un plan d’adressage clair, lisible et consistant favorisent l’adoption d’une API, sa facilité de compréhension et d’utilisation.<br />
+						Suivant le fameux principe « Cools URIs don’t change », il faut choisir évidemment des URLs agnostiques du point de vue de la technologie (ie., pas de « .php » dans l’url) ou de tout autre élément susceptible de changer dans le temps.<br />
 						C’est une bonne pratique pour le code, et c’est également une bonne pratique pour les APIs : exposer des urls, des noms de champs ou des paramètres en anglais. Cela facilitera l’adoption large de l’API, en ne faisant pas de la langue une barrière forte.
 						</p>
 					</section>
 					<section>
-						<p>l'example
-							wsw.rappfrance.com/api/dps en GET => obtenir la liste des départements
-							wsw.rappfrance.com/api/dps en POST => créer un nouveau département
-							wsw.rappfrance.com/api/dps/id en GET => obtenir le détail d’un salarié
-							wsw.rappfrance.com/api/dps/id en PUT/PATCH => mettre à jour le détail d’un salarié
-							wsw.rappfrance.com/api/dps/id en DELETE => supprimer une personne
-							wsw.rappfrance.com/api/employee en GET => obtenir la lsite coplète des salariés</p>
+						<p>
+                            <ul>
+							<li>wsw.rappfrance.com/api/dps en GET => obtenir la liste des départements.</li>
+							<li>wsw.rappfrance.com/api/dps en POST => créer un nouveau département</li>
+							<li>wsw.rappfrance.com/api/dps/id en GET => obtenir le détail d’un salarié</li>
+							<li>wsw.rappfrance.com/api/dps/id en PUT/PATCH => mettre à jour le détail d’un salarié</li>
+							<li>wsw.rappfrance.com/api/dps/id en DELETE => supprimer une personne</li>
+							<li>wsw.rappfrance.com/api/employee en GET => obtenir la liste complète des salariés</li>
+                            </ul>
+                        </p>
 					</section>
 					<section>
-						<p>l'implémentation
-						A la mano, mais il existe des frameworks : exemple : sails.js</p>
+						<p>Implémentation de l'API : 
+						A la mano, mais il existe des frameworks : sails.js par exemple</p>
 					</section>
 					<section>
-						<p>demo</p>
+						<p>Live Coding</p>
 					</section>
 				</section>
 
